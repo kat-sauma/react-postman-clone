@@ -1,16 +1,24 @@
 # react-postman-clone
 
+FORM
+container:
+state
+
 - input URL
-
-- FORM with radio buttons
-
+- radio buttons
   - get
   - put
   - post
   - delete
-
-- input JSON post/put
-
+- JSON body
 - history list
-  - container: update method, url in array
-  - component:list of methods, urls
+  - update method, url in array
+
+components:
+
+- form
+  - input
+  - method buttons
+  - text box raw json
+- DISPLAY
+- history list
