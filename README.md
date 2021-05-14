@@ -22,3 +22,7 @@ components:
   - text box raw json
 - DISPLAY
 - history list
+
+service layer:
+
+- hit api
