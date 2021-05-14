@@ -12,6 +12,7 @@ state
   - delete
 - JSON body
 - history list
+  - start with empty array
   - update method, url in array
 
 components:
