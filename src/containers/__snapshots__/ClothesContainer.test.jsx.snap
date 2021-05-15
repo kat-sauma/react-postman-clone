@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 1`] = `
+<input
+  aria-label="url"
+  id="url"
+  placeholder="http://type-api-url-here.com"
+  type="url"
+  value=""
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 2`] = `
+<button
+  aria-label="find clothes"
+  class="find-clothes"
+>
+  Search
+</button>
+`;

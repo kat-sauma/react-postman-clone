@@ -1,16 +1,23 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Spinner } from '../components/spinner/Spinner';
+import userEvent from '@testing-library/user-event';
 import ClothesContainer from './ClothesContainer';
 
 
-describe('it renders ArticleList Container', () => {
-    render(<ClothesContainer />);
+describe('Clothes Container', () => {
+    it('renders the form that holds controls, the body of returned json, and the history list', async () => {
+
+        render(<ClothesContainer />);
+        
+        const inputURL = await screen.findByRole('textbox', { url });
+        expect(inputURL).toMatchSnapshot();
+        
+        const button = await screen.findByRole('button', { name: 'find clothes' });
+        expect(button).toMatchSnapshot();
+        userEvent.type(url, 'https://yalla-habibi.herokuapp.com/clothes/1')
 
 
-    screen.getByAltText('loading spinner');
-
-    const inputURL = await.screen.findByRole('textbox', { url });
-
-    expect(inputURL).toMatchSnapshot();
-})
+        userEvent.click(button);
+        screen.getByAltText('loading-spinner');
+    });
+});
