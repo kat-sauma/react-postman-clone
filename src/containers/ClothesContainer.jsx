@@ -38,7 +38,8 @@ handleSubmit = async (event) => {
 };
 
     render() {
-        const { loading, clothes, url, results } = this.state;
+        const { loading, url, results } = this.state;
+        
         if (loading) return <Spinner />;
 
         return (
