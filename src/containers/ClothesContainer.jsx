@@ -8,7 +8,7 @@ export default class ClothesContainer extends Component {
 state = {
     loading: false,
     url: '',
-    method: '',
+    method: 'get',
     results: {},
     json: ''
 };
@@ -40,7 +40,13 @@ handleSubmit = async (event) => {
     } else if (this.state.method === 'post') {
             let results = await postToApi(url, json);
             this.setState({ results: results });
-        }
+    } else if (this.state.method === 'put') {
+            let results = await putApi(url, json);
+            this.setState({ results: results });
+    } else {
+        let results = await deleteFromApi(url);
+        this.setState({ results: results });
+    }
 
     this.setState({ loading: false });
 }
