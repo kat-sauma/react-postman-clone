@@ -31,10 +31,30 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
 `;
 
 exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 4`] = `
+<input
+  checked=""
+  id="put"
+  name="method"
+  type="radio"
+  value="put"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 5`] = `
+<input
+  checked=""
+  id="delete"
+  name="method"
+  type="radio"
+  value="delete"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 6`] = `
 <button
   aria-label="find clothes"
   class="find-clothes"
 >
-  Search
+  Submit
 </button>
 `;
