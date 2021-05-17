@@ -6,7 +6,7 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
   id="url"
   placeholder="http://type-api-url-here.com"
   type="url"
-  value=""
+  value="https://yalla-habibi.herokuapp.com/clothes"
 />
 `;
 

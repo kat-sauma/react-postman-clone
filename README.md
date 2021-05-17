@@ -4,7 +4,7 @@ FORM
 container:
 state
 
-- input URL
+- input URL X
 - radio buttons
   - get
   - put
@@ -18,7 +18,7 @@ state
 components:
 
 - form
-  - input
+  - input X
   - method buttons
   - text box raw json
 - DISPLAY
@@ -26,4 +26,4 @@ components:
 
 service layer:
 
-- hit api
+- hit api X

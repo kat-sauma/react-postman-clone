@@ -9,9 +9,14 @@ describe('Clothes Container', () => {
 
         render(<ClothesContainer />);
         
-        const inputURL = await screen.findByRole('textbox', { url });
+        const inputURL = await screen.findByRole('textbox', { name: 'url' })
+        userEvent.type(url, 'https://yalla-habibi.herokuapp.com/clothes')
         expect(inputURL).toMatchSnapshot();
+
+        const getMethod = screen.getByRole('radio', { name: 'get' })
+        expect(getMethod).toMatchSnapshot();
         
+
         const button = await screen.findByRole('button', { name: 'find clothes' });
         expect(button).toMatchSnapshot();
         userEvent.type(url, 'https://yalla-habibi.herokuapp.com/clothes/1')
