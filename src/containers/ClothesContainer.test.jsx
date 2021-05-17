@@ -22,6 +22,11 @@ describe('Clothes Container', () => {
         expect(postMethod).toMatchSnapshot();
         userEvent.click(postMethod);
         expect(postMethod).toBeChecked();
+        
+        const putMethod = screen.getByRole('radio', { name: 'put' })
+        expect(putMethod).toMatchSnapshot();
+        userEvent.click(putMethod);
+        expect(putMethod).toBeChecked();
 
         const button = await screen.findByRole('button', { name: 'find clothes' });
         expect(button).toMatchSnapshot();
