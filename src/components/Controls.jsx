@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Controls = ( { url, onUrlChange, onSubmit }) => (
+const Controls = ( { url, onUrlChange, onMethodChange, onSubmit }) => (
         <form onSubmit={onSubmit}>
             <input
                 id='url'
@@ -11,6 +11,28 @@ const Controls = ( { url, onUrlChange, onSubmit }) => (
                 placeholder='http://type-api-url-here.com'
                 aria-label='url'
             />
+            <section 
+                role='radio-button-methods'
+                className='radio-buttons'
+                >
+
+                <input 
+                    id='get'
+                    type='radio' 
+                    name='method'
+                    value='get'
+                    onChange={onMethodChange}
+                    defaultChecked
+                />
+                <label
+                    className='radio-label'
+                    htmlFor='get'
+                    aria-label='get'>
+                        get
+                </label>
+
+
+                </section>
             <button className='find-clothes' aria-label='find clothes'>Search</button>
         </form>
 );
@@ -18,6 +40,7 @@ const Controls = ( { url, onUrlChange, onSubmit }) => (
 Controls.propTypes = {
     url: PropTypes.string.isRequired,
     onUrlChange: PropTypes.func.isRequired,
+    onMethodChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired
 };
 

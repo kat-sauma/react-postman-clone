@@ -11,6 +11,16 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
 `;
 
 exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 2`] = `
+<input
+  checked=""
+  id="get"
+  name="method"
+  type="radio"
+  value="get"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 3`] = `
 <button
   aria-label="find clothes"
   class="find-clothes"
