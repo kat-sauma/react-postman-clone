@@ -6,7 +6,7 @@ state
 
 - input URL X
 - radio buttons
-  - get
+  - get X
   - put
   - post
   - delete
@@ -21,9 +21,12 @@ components:
   - input X
   - method buttons
   - text box raw json
-- DISPLAY
+- DISPLAY X
 - history list
 
 service layer:
 
-- hit api X
+- get api X
+- post api
+- put api
+- delete api

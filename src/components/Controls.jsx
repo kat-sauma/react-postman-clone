@@ -30,6 +30,21 @@ const Controls = ( { url, onUrlChange, onMethodChange, onSubmit }) => (
                     aria-label='get'>
                         get
                 </label>
+               
+                <input 
+                    id='post'
+                    type='radio' 
+                    name='method'
+                    value='post'
+                    onChange={onMethodChange}
+                    defaultChecked
+                />
+                <label
+                    className='radio-label'
+                    htmlFor='post'
+                    aria-label='post'>
+                        post
+                </label>
 
 
                 </section>
