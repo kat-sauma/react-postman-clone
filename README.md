@@ -5,8 +5,8 @@ container:
 state
 
 - input URL X
-- radio buttons
-  - get X
+- radio buttons X
+  - get
   - put
   - post
   - delete
@@ -19,14 +19,18 @@ components:
 
 - form
   - input X
-  - method buttons
-  - text box raw json
+  - method buttons X
+  - text box raw json X
 - DISPLAY X
 - history list
 
 service layer:
 
 - get api X
-- post api
-- put api
-- delete api
+- post api X
+- put api X
+- delete api X
+
+TDD
+
+CSS
