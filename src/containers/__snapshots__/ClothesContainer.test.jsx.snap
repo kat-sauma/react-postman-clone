@@ -22,7 +22,6 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
 
 exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 3`] = `
 <input
-  checked=""
   id="post"
   name="method"
   type="radio"
@@ -32,7 +31,6 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
 
 exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 4`] = `
 <input
-  checked=""
   id="put"
   name="method"
   type="radio"
@@ -42,7 +40,6 @@ exports[`Clothes Container renders the form that holds controls, the body of ret
 
 exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 5`] = `
 <input
-  checked=""
   id="delete"
   name="method"
   type="radio"
