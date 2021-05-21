@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubmit }) => {
+const Controls = ({ url, json, method, onUrlChange, onMethodChange, onJsonChange, onSubmit }) => {
         const jsonPlaceholder = '{ \n "send": "raw", \n "json": "like so" \n} ' 
 
     return (
@@ -25,7 +25,7 @@ const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubm
                     name='method'
                     value='get'
                     onChange={onMethodChange}
-                    defaultChecked
+                    checked={method === 'get'}
                 />
                 <label
                     className='radio-label'
@@ -40,7 +40,7 @@ const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubm
                     name='method'
                     value='post'
                     onChange={onMethodChange}
-                    defaultChecked
+                    checked={method === 'post'}
                 />
                 <label
                     className='radio-label'
@@ -55,7 +55,7 @@ const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubm
                     name='method'
                     value='put'
                     onChange={onMethodChange}
-                    defaultChecked
+                    checked={method === 'put'}
                 />
                 <label
                     className='radio-label'
@@ -70,7 +70,7 @@ const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubm
                     name='method'
                     value='delete'
                     onChange={onMethodChange}
-                    defaultChecked
+                    checked={method === 'delete'}
                 />
                 <label
                     className='radio-label'
@@ -97,6 +97,7 @@ const Controls = ({ url, json, onUrlChange, onMethodChange, onJsonChange, onSubm
 Controls.propTypes = {
     url: PropTypes.string.isRequired,
     json: PropTypes.string.isRequired,
+    method: PropTypes.string.isRequired,
     onUrlChange: PropTypes.func.isRequired,
     onMethodChange: PropTypes.func.isRequired,
     onJsonChange: PropTypes.func.isRequired,

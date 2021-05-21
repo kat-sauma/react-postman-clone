@@ -11,7 +11,7 @@ export const httpCall = async (url) => {
 
 export const postToApi = async (url, body) => {
     try {
-        const res = await(url, {
+        const res = await fetch(url, {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json' 
@@ -28,7 +28,7 @@ export const postToApi = async (url, body) => {
 
 export const putApi = async (url, body) => {
     try {
-        const res = await(url, {
+        const res = await fetch(url, {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json' 

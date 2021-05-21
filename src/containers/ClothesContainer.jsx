@@ -30,37 +30,33 @@ handleJsonChange = (e) => {
 handleSubmit = async (event) => {
     event.preventDefault();
 
-    const { url } = this.state;
+    const { url, method, json } = this.state;
     this.setState({ loading: true });
-    const clothes = await httpCall(url);
-
-    if (this.state.method === 'get') {
-        let results = clothes;
-        this.setState({ results: results });
-    } else if (this.state.method === 'post') {
-            let results = await postToApi(url, json);
-            this.setState({ results: results });
-    } else if (this.state.method === 'put') {
-            let results = await putApi(url, json);
-            this.setState({ results: results });
+    let results;
+    if (method === 'get') {
+        results = await httpCall(url);
+    } else if (method === 'post') {
+        results = await postToApi(url, json);
+    } else if (method === 'put') {
+        results = await putApi(url, json);
     } else {
-        let results = await deleteFromApi(url);
-        this.setState({ results: results });
+        results = await deleteFromApi(url);
     }
-
+    this.setState({ results: results });
     this.setState({ loading: false });
 }
 
     render() {
-        const { loading, url, results, json } = this.state;
+        const { loading, url, results, json, method } = this.state;
         
         if (loading) return <Spinner />;
-
+        console.log(this.state.method, 'method');
         return (
             <main className='organize-closet' aria-label='organize closet'>
                 <Controls 
                     url={url}
                     json={json}
+                    method={method}
                     onUrlChange={this.handleOnChange}
                     onMethodChange={this.handleMethodChange}
                     onJsonChange={this.handleJsonChange}

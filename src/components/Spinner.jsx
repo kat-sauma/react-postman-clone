@@ -4,7 +4,7 @@ const Spinner = () => {
     
         return (
             <figure>
-                <img className='loading-spinner' src='../spinner/loadingedit3.gif' alt='loading-spinner' aria-label='loading spinner' />
+                <img className='loading-spinner' src='loadingedit3.gif' alt='loading-spinner' aria-label='loading spinner' />
             </figure>
         )
     }
