@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 1`] = `
+<input
+  aria-label="url"
+  id="url"
+  placeholder="http://type-api-url-here.com"
+  type="url"
+  value="https://yalla-habibi.herokuapp.com/clothes"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 2`] = `
+<input
+  checked=""
+  id="get"
+  name="method"
+  type="radio"
+  value="get"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 3`] = `
+<input
+  id="post"
+  name="method"
+  type="radio"
+  value="post"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 4`] = `
+<input
+  id="put"
+  name="method"
+  type="radio"
+  value="put"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 5`] = `
+<input
+  id="delete"
+  name="method"
+  type="radio"
+  value="delete"
+/>
+`;
+
+exports[`Clothes Container renders the form that holds controls, the body of returned json, and the history list 6`] = `
+<button
+  aria-label="find clothes"
+  class="find-clothes"
+>
+  Submit
+</button>
+`;
